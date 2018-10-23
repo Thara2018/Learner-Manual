@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funtions and Returns</title>
+	<script>
+		/*var area = getArea (5,10);
+		console.log(area);
+
+		function getArea(width,height) {
+			return width*height;
+		}*/
+
+		/*console.log(getArea(5,10));
+
+		function getArea(width,height) {
+			return width*height;*/
+		
+		var size=getSize(5,10,2);
+		var area=getSize(5,10,2);
+		console.log(area);
+		console.log(getSize(5,10,2));
+		console.log("The Area is " + size[0] + " and the volume is " + size [1]);
+
+		function getArea(width,height) {
+			return width*height;
+		}
+
+		function getSize(width,height,depth) {
+			var area = getArea(width,height);
+			var volume= width*height*depth;
+			var size=[area,volume];
+			return size;
+		}
+	</script>
+</head>
