@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>scope</title>
+	<script>
+		/*var a=123;
+		b();
+
+		function b() {
+			a=222;
+			c();
+
+		function c() {
+			var a=4444;
+		}
+
+	}
+	console.log(a);WILL RETURN 123
+	*/
+
+	/*	var a=123; 
+		b();
+
+		function b() { 
+			a=222;
+			c();
+
+		function c() {
+			var a=4444;
+			console.log(this.a);
+		}
+
+	}
+	THIS.A refers to parent 
+	ELSE RETURN FOLLOWS CONSOLE LOG LOCATION*/
+
+		var a=123;
+		b();
+		console.log(a);
+
+		function b() {
+			a=222;
+			c();
+
+		function c() {
+			var a=4444;
+		}
+
+	}
+	
+
+
+
+
+
+	</script>
+<head>

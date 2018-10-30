@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FunctionAnd Objects</title>
+	<script>
+	
+
+	var hotel={
+		name:"Quay",
+		rooms:40,
+		booked:25,
+		checkAvailability:function() {
+			return this.rooms-this.booked
+		} 
+	}
+
+//WRITING OBJECT
+
+	function Hotel(name,rooms,booked){
+		this.name=name;
+		this.rooms=rooms;
+		this.booked=booked;
+		this.checkAvailability=function() {
+			return this.rooms-this.booked
+		}
+	}
+
+	var quayHotel=new Hotel("Quay",40,25);
+	var parkHotel=new Hotel("Park",120,77);
+
+
+
+/*RETURN IN CONSOLE
+hotel
+{name: "Quay", rooms: 40, booked: 25, checkAvailability: ƒ}
+hotel.name
+"Quay"
+hotel.rooms
+40
+hotel.checkAvailability()
+15
+hotel.booked=5
+5
+hotel.checkAvailability()
+35*/
+
+	</script>
+</head>

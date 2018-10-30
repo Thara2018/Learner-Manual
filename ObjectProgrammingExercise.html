@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ObjectOrientedProgrammingExercise</title>
+	<script>
+
+	/*var book=
+	{
+		title:"Blue ",
+		author:"James ",
+		pages:50,
+		checkRead:function() {
+			return ++ this.pages
+		},
+		checkBuy:function() {
+			return this.title+ this.author+"has been purchased"
+		}
+		
+	}*/
+
+
+		function Book(title,author,pages)
+		{
+		this.title=title;
+		this.author=author;
+		this.pages=pages;
+		this.checkRead=function() {
+			return ++this.pages};
+		this.checkBuy=function() {
+			return this.title+"by "+ this.author+"has been purchased"}
+		}
+
+	var blueBook=new Book("Blue ","James ",25);
+	var redBook=new Book("Red ","Wilson ",77);
+
+	</script>
+</head>
