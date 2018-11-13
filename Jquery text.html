@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
+	<script>
+		
+		$(document).ready(function(){
+		/*
+		$('p').text("test");
+		$('#abc').html("<strong>click</strong>this")
+		$('p.third').text("This is the paraghraph");
+
+		/*$('div').click(clicked);
+		function clicked(){ 
+			alert("div clicked");
+			$('p').show();
+		}
+
+		$('div').click(clicked);
+		function clicked(){ 
+			$('p:first()').fadeToggle();
+			$('p:eq(1)').fadeToggle("slow");
+			$('p:eq(2)').fadeToggle("10000");
+		}
+
+		var div=$("div");
+		div.animate({left: '100px'}, "slow");
+    	div.animate({fontSize: '3em'}, "slow");
+
+    	$('p').hide("slow",function(){
+    		alert("paraghraph is hidden");
+    	});
+		*/
+
+    	$("div#chain")
+    	.css("color", "orange")
+  		.slideUp(2000)
+  		.slideDown(2000)
+  		.fadeOut(1000);
+}); 
+ 
+
+
+
+/*Reusable function*/
+
+	</script>
+</head>
+<body>
+	
+<p>1</p>
+<p>2</p>
+<p id="third">3</p>
+<div id="chain">Chaining Example</div>
+
+</body>
+</html>

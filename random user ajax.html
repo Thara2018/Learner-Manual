@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>json</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$.ajax({
+  			url: 'https://randomuser.me/api/',
+  			dataType: 'json',
+  			success: function(result) {
+    		/*document.write(JSON.stringify(result));
+    		console.log(result)*/
+
+    		
+    		var firstName=result.results[0].name.first;
+    		var lastName=result.results[0].name.last
+    		var name=firstName+" "+lastName;
+    		var age=result.results[0].dob.age;
+    		var dob=new Date (result.results[0].dob.date);
+    		var showDob=dob.getDate()+"/" +(dob.getMonth()+1) + "/"+dob.getFullYear();
+    		var email = result.results[0].email;
+    		var phone = result.results[0].phone;
+    		var imageUrl=result.results[0].picture.large;
+
+    		
+    		$("#name").text("Name: "+name);
+    		$("#email").text("Email: "+email);
+    		$("#age").text("DOB: " + showDob +"(" + age + ")");
+			$("#photo").attr("src", imageUrl);
+
+
+ 			}
+    		});
+			});
+		
+	</script>
+	<body>
+		<img width="300" id="photo">
+		<p id="name"></p>
+
+	</body>
+</html>
